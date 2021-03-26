@@ -13,8 +13,6 @@ class App extends React.Component {
             searchfield : '',         
         }
     }
-    //hello
-    //
     componentDidMount() {
         // console.log('check');
         fetch('https://jsonplaceholder.typicode.com/users')
@@ -28,7 +26,7 @@ class App extends React.Component {
         this.setState({ searchfield: event.target.value})
     }
     render (){
-        const filteredRobots = this.state.robots.filter(robot=>{ //filter return后面写conditions
+        const filteredRobots = this.state.robots.filter(robot=>{ 
             return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         })
         return (
